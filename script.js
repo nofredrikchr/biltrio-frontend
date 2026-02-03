@@ -17,11 +17,29 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.remove('nav--scrolled');
     }
 
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+      if (scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    }
+
     lastScroll = scrollY;
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
+
+  // ── Back to top ──
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   // ── Mobile menu ──
   const burger = document.getElementById('navBurger');
