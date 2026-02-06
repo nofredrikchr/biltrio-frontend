@@ -1996,12 +1996,29 @@ img { max-width: 100%; display: block; }
     display: none;
   }
 
+  .hero__partners {
+    bottom: 20px;
+    padding: 0 16px;
+  }
+
+  .hero__partners-title {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+
   .hero__partners-row {
-    gap: 18px;
+    gap: 12px;
+    row-gap: 10px;
   }
 
   .hero__partner-logo {
-    height: 26px;
+    height: 20px;
+    max-width: 70px;
+  }
+
+  /* Hide last two logos on very small screens */
+  .hero__partner-logo:nth-child(n+5) {
+    display: none;
   }
 
   .timeline,
@@ -2315,5 +2332,33 @@ img { max-width: 100%; display: block; }
     grid-template-columns: 1fr;
     max-width: 420px;
     margin: 0 auto 40px;
+  }
+}
+
+/* Very small screens - Extra mobile optimization */
+@media (max-width: 480px) {
+  .hero__partners {
+    bottom: 16px;
+    padding: 0 12px;
+  }
+
+  .hero__partners-title {
+    font-size: 9px;
+    margin-bottom: 10px;
+  }
+
+  .hero__partners-row {
+    gap: 10px;
+    row-gap: 8px;
+  }
+
+  .hero__partner-logo {
+    height: 18px;
+    max-width: 60px;
+  }
+
+  /* Show only 3 logos on very small screens */
+  .hero__partner-logo:nth-child(n+4) {
+    display: none;
   }
 }
