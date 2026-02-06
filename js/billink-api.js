@@ -5,7 +5,9 @@
 
 const BILLINK_BASE_URL = 'https://billink.no/page2_xml.php';
 const BILLINK_PARAMS = 'kode=6d70a359-bcc4-45ff-9e40-2fba10c08bac&butikk=berglyhallen';
-const LOCAL_PROXY = 'http://localhost:8000/proxy?url=';
+
+// Use Vercel serverless function for proxy (works both locally and in production)
+const PROXY_URL = '/api/proxy?url=';
 
 /**
  * Fetch XML from URL using local proxy
@@ -14,8 +16,8 @@ const LOCAL_PROXY = 'http://localhost:8000/proxy?url=';
  */
 async function fetchXML(url) {
   try {
-    // Use local proxy to avoid CORS issues
-    const proxyUrl = LOCAL_PROXY + encodeURIComponent(url);
+    // Use Vercel serverless function proxy to avoid CORS issues
+    const proxyUrl = PROXY_URL + encodeURIComponent(url);
     const response = await fetch(proxyUrl);
 
     if (!response.ok) {
