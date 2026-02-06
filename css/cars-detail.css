@@ -1,0 +1,388 @@
+/**
+ * Car Detail Page Styles
+ */
+
+.car-detail {
+  padding: 120px 24px 80px;
+  background: var(--off-white);
+  min-height: 100vh;
+}
+
+.car-detail__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========== BREADCRUMBS ========== */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: var(--slate);
+}
+
+.breadcrumbs a {
+  color: var(--slate);
+  transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+  color: var(--blue);
+}
+
+.breadcrumbs__separator {
+  color: var(--silver);
+}
+
+/* ========== HERO ========== */
+.car-detail__hero {
+  margin-bottom: 32px;
+}
+
+.car-detail__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.car-detail__price {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: -0.02em;
+}
+
+/* ========== GALLERY ========== */
+.car-detail__gallery {
+  margin-bottom: 48px;
+}
+
+.gallery__main {
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--cloud);
+  margin-bottom: 16px;
+}
+
+.gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.gallery__main img:hover {
+  transform: scale(1.02);
+}
+
+.gallery__thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.gallery__thumbnail {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--cloud);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.25s var(--ease-out);
+}
+
+.gallery__thumbnail:hover {
+  border-color: var(--blue);
+}
+
+.gallery__thumbnail.active {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.1);
+}
+
+.gallery__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== LAYOUT ========== */
+.car-detail__layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.car-detail__left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ========== SECTIONS ========== */
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.car-specs,
+.car-equipment,
+.car-description {
+  background: var(--white);
+  border: 1px solid var(--mist);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+/* ========== SPECS GRID ========== */
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.spec-item__label {
+  font-size: 13px;
+  color: var(--slate);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.spec-item__value {
+  font-size: 16px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ========== EQUIPMENT ========== */
+.equipment-list {
+  display: grid;
+  gap: 12px;
+}
+
+.equipment-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--ink);
+  padding: 8px 0;
+}
+
+.equipment-item::before {
+  content: '✓';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: var(--blue-light);
+  color: var(--blue);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* ========== DESCRIPTION ========== */
+.description-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--graphite);
+  white-space: pre-wrap;
+}
+
+.description-text p {
+  margin-bottom: 16px;
+}
+
+.description-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== CONTACT CARD ========== */
+.car-detail__right {
+  position: relative;
+}
+
+.car-contact-card {
+  position: sticky;
+  top: 100px;
+  background: var(--white);
+  border: 1px solid var(--mist);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.contact-card__title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.contact-card__price {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.contact-card__button {
+  width: 100%;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--cloud);
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--graphite);
+}
+
+.contact-info svg {
+  flex-shrink: 0;
+  color: var(--slate);
+}
+
+.contact-info a {
+  color: var(--graphite);
+  transition: color 0.2s;
+}
+
+.contact-info a:hover {
+  color: var(--blue);
+}
+
+/* ========== RELATED CARS ========== */
+.related-cars {
+  margin-top: 60px;
+}
+
+.related-cars .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.related-cars__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ========== LOADING & ERROR STATES ========== */
+.car-detail__loading,
+.car-detail__error {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.car-detail__loading p {
+  font-size: 16px;
+  color: var(--slate);
+}
+
+.car-detail__error h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.car-detail__error p {
+  font-size: 16px;
+  color: var(--slate);
+  margin-bottom: 24px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .car-detail {
+    padding: 100px 20px 60px;
+  }
+
+  .car-detail__layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .car-contact-card {
+    position: relative;
+    top: 0;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .related-cars__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery__thumbnails {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+
+  .car-specs,
+  .car-equipment,
+  .car-description {
+    padding: 24px;
+  }
+
+  .car-contact-card {
+    padding: 24px;
+  }
+
+  .related-cars__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery__thumbnails {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

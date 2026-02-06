@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Våre biler — Biltrio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/cars-inventory.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg class="nav__logo-icon" height="28" viewBox="3 3 212 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M43.8819 5.17566H8.91112C6.85098 5.17566 5.18091 6.84404 5.18091 8.90209V47.098C5.18091 49.1561 6.85098 50.8245 8.91112 50.8245H43.8819C45.942 50.8245 47.6121 49.1561 47.6121 47.098V8.90209C47.6121 6.84404 45.942 5.17566 43.8819 5.17566Z" fill="currentColor"/>
+          <path d="M24.5465 17.3473L24.595 22.5813C24.595 24.6652 27.8453 24.7621 27.8453 22.6297V17.3958C27.8453 15.2634 24.6435 15.1665 24.5465 17.3473ZM13.5343 10.6594C13.5828 10.611 38.3724 10.2717 38.4694 10.3686C39.1486 10.9987 39.4882 17.6865 39.4882 25.0044C38.4694 25.9737 37.2567 26.1191 37.0626 26.1675C35.1706 26.3614 35.0736 28.9299 36.82 29.3176C37.9358 29.6084 39.2942 30.7715 39.4882 31.2561C39.3427 38.3317 39.0516 44.6319 38.615 45.0196C37.5962 45.8919 14.0194 46.1342 13.3888 45.0196C12.4185 43.2264 13.3402 10.7079 13.5343 10.6594ZM24.401 31.6438L24.304 37.5563C24.2554 39.6887 27.5057 39.7371 27.5543 37.6048L27.6998 31.7408C27.6998 29.5599 24.4495 29.5115 24.401 31.6438Z" fill="white"/>
+          <path d="M79.9845 25.8925C84.1942 27.0291 88.1764 30.7799 88.1764 36.2925C88.1764 43.5101 83.6253 47.9429 73.7267 47.9429H58.0255V8.16124H72.8734C81.1222 8.16124 85.2751 12.8214 85.2751 18.1635C85.2751 22.369 82.5445 24.7559 79.9845 25.8925ZM72.077 15.4356H66.3312V23.4488H72.077C75.6041 23.4488 77.0263 21.8007 77.0263 19.4138C77.0263 16.8564 75.3765 15.4356 72.077 15.4356ZM73.2716 40.6685C77.8227 40.6685 79.8707 38.7931 79.8707 35.2696C79.8707 32.2575 77.8227 30.1548 72.9303 30.1548H66.3312V40.6685H73.2716ZM101.261 7.76343V14.6968H93.1257V7.76343H101.261ZM101.261 18.3908V47.9429H93.1257V18.3908H101.261ZM115.312 7.76343V47.9429H107.177V7.76343H115.312ZM134.711 41.1232C136.247 41.1232 137.385 40.9527 138.637 40.498V47.3177C137.385 47.886 135.451 48.2839 132.606 48.2839C127.998 48.2839 124.13 46.6926 124.13 38.3384V25.0968H119.977V18.3908H124.13V11.4574H132.265V18.3908H138.58V25.0968H132.265V38.2816C132.265 39.6456 132.663 41.1232 134.711 41.1232ZM161.904 17.9362C162.643 17.9362 163.326 17.9362 164.066 18.1066V25.8925C163.383 25.722 162.7 25.722 162.131 25.722C156.67 25.722 152.176 29.6433 151.664 35.3264V47.9429H143.529V18.3908H151.664V25.7788C152.972 21.2892 156.556 17.9362 161.904 17.9362ZM176.866 7.76343V14.6968H168.731V7.76343H176.866ZM176.866 18.3908V47.9429H168.731V18.3908H176.866ZM197.345 17.8793C204.058 17.8793 212.819 22.9373 212.819 33.2805C212.819 43.6237 204.058 48.5112 197.345 48.5112C190.633 48.5112 181.815 43.6237 181.815 33.2805C181.815 22.9373 190.633 17.8793 197.345 17.8793ZM197.345 25.0968C193.648 25.0968 189.722 27.8816 189.722 33.2805C189.722 38.5089 193.648 41.2937 197.345 41.2937C200.986 41.2937 204.969 38.5089 204.969 33.2805C204.969 27.8816 200.986 25.0968 197.345 25.0968Z" fill="currentColor"/>
+        </svg>
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html#hero" class="nav__link">Selge bil</a>
+        <a href="biler.html" class="nav__link nav__link--active">Kjøpe bil</a>
+        <a href="index.html#faq" class="nav__link">Spørsmål og svar</a>
+        <a href="index.html#footer" class="nav__link">Om oss</a>
+      </div>
+      <div class="nav__actions">
+        <a href="index.html#hero" class="nav__cta">Få pris nå</a>
+      </div>
+      <button class="nav__burger" id="navBurger" aria-label="Meny">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__inner">
+      <a href="index.html#hero" class="mobile-menu__link">Selge bil</a>
+      <a href="biler.html" class="mobile-menu__link">Kjøpe bil</a>
+      <a href="index.html#faq" class="mobile-menu__link">Spørsmål og svar</a>
+      <a href="index.html#footer" class="mobile-menu__link">Om oss</a>
+      <a href="index.html#hero" class="mobile-menu__cta">Få pris nå</a>
+    </div>
+  </div>
+
+  <!-- Inventory Section -->
+  <section class="inventory">
+    <div class="inventory__inner">
+      <div class="inventory__header">
+        <h1 class="inventory__title">Våre biler</h1>
+        <p class="inventory__count">Viser <span id="resultCount">0</span> biler</p>
+      </div>
+
+      <div class="inventory__filter-bar">
+        <div class="search-bar">
+          <svg class="search-bar__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="8.5" cy="8.5" r="5.75" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12.5 12.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <input type="text" id="searchInput" class="search-bar__input" placeholder="Søk etter merke, modell eller utstyr...">
+        </div>
+
+        <div class="filter-dropdowns">
+          <div class="filter-dropdown">
+            <button class="filter-dropdown__button" id="locationFilterBtn">
+              <span>Lokasjon</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="filter-dropdown__menu" id="locationFilterMenu">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="filter-dropdown">
+            <button class="filter-dropdown__button" id="fuelFilterBtn">
+              <span>Drivstoff</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="filter-dropdown__menu" id="fuelFilterMenu">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="filter-dropdown">
+            <button class="filter-dropdown__button" id="priceFilterBtn">
+              <span>Pris</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="filter-dropdown__menu" id="priceFilterMenu">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="filter-dropdown">
+            <button class="filter-dropdown__button" id="yearFilterBtn">
+              <span>Årsmodell</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="filter-dropdown__menu" id="yearFilterMenu">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="inventory__active-filters" id="activeFilters">
+        <!-- Active filter chips will be inserted here -->
+      </div>
+
+      <div class="inventory__controls">
+        <div class="inventory__sort">
+          <label for="sortSelect">Sorter etter:</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="price-asc">Pris: Lav til høy</option>
+            <option value="price-desc">Pris: Høy til lav</option>
+            <option value="year-desc">Årsmodell: Nyeste først</option>
+            <option value="year-asc">Årsmodell: Eldste først</option>
+            <option value="mileage-asc">Kilometerstand: Lavest først</option>
+            <option value="mileage-desc">Kilometerstand: Høyest først</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="inventory__grid" id="inventoryGrid">
+        <!-- Car cards will be inserted here by JavaScript -->
+      </div>
+
+      <div class="inventory__pagination" id="pagination">
+        <!-- Pagination will be inserted here by JavaScript -->
+      </div>
+
+      <div class="inventory__error" id="errorMessage" style="display: none;">
+        <p>Kunne ikke laste biler. Prøv igjen senere.</p>
+        <button class="btn btn--primary" id="retryButton">Prøv på nytt</button>
+      </div>
+
+      <div class="inventory__no-results" id="noResults" style="display: none;">
+        <p>Ingen biler matcher søket ditt.</p>
+        <button class="btn btn--secondary" id="clearFiltersBtn">Nullstill filtre</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo nav__logo--footer">
+            <svg class="nav__logo-icon" height="28" viewBox="3 3 212 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.8819 5.17566H8.91112C6.85098 5.17566 5.18091 6.84404 5.18091 8.90209V47.098C5.18091 49.1561 6.85098 50.8245 8.91112 50.8245H43.8819C45.942 50.8245 47.6121 49.1561 47.6121 47.098V8.90209C47.6121 6.84404 45.942 5.17566 43.8819 5.17566Z" fill="currentColor"/>
+              <path d="M24.5465 17.3473L24.595 22.5813C24.595 24.6652 27.8453 24.7621 27.8453 22.6297V17.3958C27.8453 15.2634 24.6435 15.1665 24.5465 17.3473ZM13.5343 10.6594C13.5828 10.611 38.3724 10.2717 38.4694 10.3686C39.1486 10.9987 39.4882 17.6865 39.4882 25.0044C38.4694 25.9737 37.2567 26.1191 37.0626 26.1675C35.1706 26.3614 35.0736 28.9299 36.82 29.3176C37.9358 29.6084 39.2942 30.7715 39.4882 31.2561C39.3427 38.3317 39.0516 44.6319 38.615 45.0196C37.5962 45.8919 14.0194 46.1342 13.3888 45.0196C12.4185 43.2264 13.3402 10.7079 13.5343 10.6594ZM24.401 31.6438L24.304 37.5563C24.2554 39.6887 27.5057 39.7371 27.5543 37.6048L27.6998 31.7408C27.6998 29.5599 24.4495 29.5115 24.401 31.6438Z" fill="white"/>
+              <path d="M79.9845 25.8925C84.1942 27.0291 88.1764 30.7799 88.1764 36.2925C88.1764 43.5101 83.6253 47.9429 73.7267 47.9429H58.0255V8.16124H72.8734C81.1222 8.16124 85.2751 12.8214 85.2751 18.1635C85.2751 22.369 82.5445 24.7559 79.9845 25.8925ZM72.077 15.4356H66.3312V23.4488H72.077C75.6041 23.4488 77.0263 21.8007 77.0263 19.4138C77.0263 16.8564 75.3765 15.4356 72.077 15.4356ZM73.2716 40.6685C77.8227 40.6685 79.8707 38.7931 79.8707 35.2696C79.8707 32.2575 77.8227 30.1548 72.9303 30.1548H66.3312V40.6685H73.2716ZM101.261 7.76343V14.6968H93.1257V7.76343H101.261ZM101.261 18.3908V47.9429H93.1257V18.3908H101.261ZM115.312 7.76343V47.9429H107.177V7.76343H115.312ZM134.711 41.1232C136.247 41.1232 137.385 40.9527 138.637 40.498V47.3177C137.385 47.886 135.451 48.2839 132.606 48.2839C127.998 48.2839 124.13 46.6926 124.13 38.3384V25.0968H119.977V18.3908H124.13V11.4574H132.265V18.3908H138.58V25.0968H132.265V38.2816C132.265 39.6456 132.663 41.1232 134.711 41.1232ZM161.904 17.9362C162.643 17.9362 163.326 17.9362 164.066 18.1066V25.8925C163.383 25.722 162.7 25.722 162.131 25.722C156.67 25.722 152.176 29.6433 151.664 35.3264V47.9429H143.529V18.3908H151.664V25.7788C152.972 21.2892 156.556 17.9362 161.904 17.9362ZM176.866 7.76343V14.6968H168.731V7.76343H176.866ZM176.866 18.3908V47.9429H168.731V18.3908H176.866ZM197.345 17.8793C204.058 17.8793 212.819 22.9373 212.819 33.2805C212.819 43.6237 204.058 48.5112 197.345 48.5112C190.633 48.5112 181.815 43.6237 181.815 33.2805C181.815 22.9373 190.633 17.8793 197.345 17.8793ZM197.345 25.0968C193.648 25.0968 189.722 27.8816 189.722 33.2805C189.722 38.5089 193.648 41.2937 197.345 41.2937C200.986 41.2937 204.969 38.5089 204.969 33.2805C204.969 27.8816 200.986 25.0968 197.345 25.0968Z" fill="currentColor"/>
+            </svg>
+          </a>
+          <p class="footer__tagline">Din trygge partner for bilsalg i Norge</p>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Kontakt oss</h4>
+          <ul class="footer__list">
+            <li><a href="mailto:salg@biltrio.no">salg@biltrio.no</a></li>
+            <li><a href="tel:+4769211921">+47 69 21 19 21</a></li>
+            <li>Sørlifjellet 4, 1788 Halden</li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Informasjon</h4>
+          <ul class="footer__list">
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">Personvern</a></li>
+            <li><a href="#">Vilkår</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Biltrio. Alle rettigheter reservert.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Tilbake til toppen">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16V4M10 4L4.5 9.5M10 4L15.5 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="js/nav.js"></script>
+  <script type="module" src="js/inventory.js"></script>
+</body>
+</html>
