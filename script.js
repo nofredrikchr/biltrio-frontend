@@ -148,4 +148,67 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Timeline Horizontal Scroll (Vertical scroll -> Horizontal movement) ──
+  const timelineSpacer = document.getElementById('timelineScrollSpacer');
+  const timelineContainer = document.getElementById('timelineScrollContainer');
+  const timelineTrack = timelineContainer?.querySelector('.timeline__track');
+  const timelineProgress = document.getElementById('timelineProgress');
+  const timelineScrollHint = document.getElementById('timelineScrollHint');
+
+  if (timelineSpacer && timelineContainer && timelineTrack && timelineProgress) {
+    const updateTimelinePosition = () => {
+      // Only apply on desktop
+      if (window.innerWidth <= 900) {
+        timelineTrack.style.transform = 'translateX(0)';
+        timelineProgress.style.width = '0%';
+        return;
+      }
+
+      const spacerRect = timelineSpacer.getBoundingClientRect();
+      const spacerTop = spacerRect.top;
+      const spacerHeight = spacerRect.height;
+      const windowHeight = window.innerHeight;
+
+      // Calculate scroll progress through the spacer
+      // Start when spacer top hits middle of screen
+      const startOffset = windowHeight * 0.2;
+      const scrollStart = -spacerTop + startOffset;
+      const scrollRange = spacerHeight - windowHeight;
+
+      // Calculate progress (0 to 1)
+      let progress = scrollStart / scrollRange;
+      progress = Math.max(0, Math.min(1, progress));
+
+      // Calculate how far to translate the track
+      const trackWidth = timelineTrack.scrollWidth;
+      const containerWidth = timelineContainer.clientWidth;
+      const maxTranslate = trackWidth - containerWidth;
+
+      // Apply horizontal translation
+      const translateX = -progress * maxTranslate;
+      timelineTrack.style.transform = `translateX(${translateX}px)`;
+
+      // Update progress bar
+      timelineProgress.style.width = `${progress * 100}%`;
+
+      // Hide scroll hint after scrolling starts
+      if (timelineScrollHint) {
+        if (progress > 0.05) {
+          timelineScrollHint.classList.add('hidden');
+        } else {
+          timelineScrollHint.classList.remove('hidden');
+        }
+      }
+    };
+
+    // Update on scroll
+    window.addEventListener('scroll', updateTimelinePosition, { passive: true });
+
+    // Update on resize
+    window.addEventListener('resize', updateTimelinePosition, { passive: true });
+
+    // Initial call
+    updateTimelinePosition();
+  }
+
 });
