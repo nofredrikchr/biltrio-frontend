@@ -1,0 +1,28 @@
+{
+  "name": "biltrio-frontend",
+  "version": "1.0.0",
+  "description": "Biltrio - Selg bilen din raskt, trygt og enkelt",
+  "main": "local-dev-server.js",
+  "scripts": {
+    "dev": "node local-dev-server.js",
+    "start": "node local-dev-server.js",
+    "vercel-dev": "vercel dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nofredrikchr/biltrio-frontend.git"
+  },
+  "keywords": [
+    "biltrio",
+    "bilsalg",
+    "billink"
+  ],
+  "author": "Biltrio",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "vercel": "^37.0.0"
+  }
+}
